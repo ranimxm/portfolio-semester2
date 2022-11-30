@@ -15,6 +15,8 @@
   --boxes--: rgba(0, 191, 255, 0.193);
   --mousehover: rgba(0, 191, 255, 0.552);
   --background-opacity: .15;
+  --hover:rgba(0, 191, 255, 0.549);
+
 }
 html[data-theme='light']{
   --background--:white;
@@ -22,6 +24,12 @@ html[data-theme='light']{
   --boxes--: rgba(12, 66, 172, 0.2);
   --mousehover:rgba(12, 65, 172, 0.599);
   --background-opacity: .12;
+  --hover:rgba(11, 80, 217, 0.832);
+
+}
+a:hover, i:hover{
+  color: var(--hover);
+  transition: .3s ease-in-out;
 }
 
 #sun-button{
@@ -50,7 +58,7 @@ html, body{
   width: 100%;  
   
   font-family: 'montserrat';
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 a{
@@ -210,8 +218,6 @@ footer{
   transition: all 200ms ease-out;
   position: fixed;
   pointer-events: none;
-  left: 0;
-  top: 0;
   transform: translate(calc(-50% + 15px), -50%);
 }
 
@@ -265,5 +271,8 @@ footer{
         padding: 0;
         margin: 1em;
       }
-    
+    html, body{
+      font-size: .95rem;
+
+    }
 }

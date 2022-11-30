@@ -1,0 +1,11 @@
+@import url(/css/style.css);
+@import url(/css/projects.css);
+
+.filter{
+    display: flex;
+    gap: 0.85em;
+    flex-direction: column;
+    max-width: 60%;
+    width: 60%;
+    line-height: 1.5em;
+}

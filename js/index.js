@@ -70,7 +70,7 @@ document.addEventListener('mousemove', function(e){
 });
 
 // for hovering on a text, tried on my own
-var a = document.querySelectorAll(['a', 'i']);
+var a = document.querySelectorAll(['a', 'i', '.return', '.images']);
 
 a.forEach(item => {
   item.addEventListener('mouseover', () => {

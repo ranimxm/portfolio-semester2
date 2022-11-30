@@ -6,6 +6,11 @@
     --circle--:rgb(199, 199, 199);
     --close--:white;
     --lines--:rgba(171, 171, 171, 0.432);
+    --html: blue;
+    --java: green;
+    --project:red;
+    --ucd:orange;
+    --media:yellow;
 }
 
 html[data-theme='light']{
@@ -14,8 +19,12 @@ html[data-theme='light']{
     --circle--:rgb(52, 52, 52);
     --close--:white;
     --lines--:rgb(35, 35, 35);
+    --html: blue;
+    --java: green;
+    --project:red;
+    --ucd:orange;
+    --media:yellow;
 }
-
 .home-main{
     height: 100%;
     display: flex;
@@ -40,8 +49,16 @@ article h4{
     line-height: 5em;
 }
 .return{
-    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 150px [col-start]);}
+.return a{
+    grid-column-start: 2;
+  grid-row-start: row1-start;
 }
+/* .return span{
+    font-weight: 800;
+} */
 .container{
     position: inherit;
     display: flex;
@@ -53,7 +70,7 @@ article h4{
     margin-left: 2em;
 
 }
-.container aside{
+.container nav{
     margin-right: 5em;
 }
 .categories{
@@ -61,10 +78,12 @@ article h4{
     flex-direction: column;
     line-height: 1.8em;
 }
-.container aside h2{
+.container nav h2{
     margin-bottom: 1em;
 }
-
+.categories li a:hover{
+    color: var(--hover);
+}
 .content{
     width: 55em;
     max-width: 100%;
@@ -74,13 +93,19 @@ article h4{
     padding: 4em;
     line-height: 5em;
 }
+
 .image-content{
     max-width: 100%;
     height: 20em;
     margin-top: 1em;
     width: 100%;
 }
-
+.images-1{
+    margin: 0.5em;
+    width: 600px;
+    max-width: 100%;
+    height: 150px;
+}
 .images{
     margin: 0.5em;
     width: 300px;
@@ -187,11 +212,40 @@ article h4{
 }
 
 .ucd{
-    border-top: 2px solid var(--ucd);
+    border-top: 3px solid var(--ucd);
 }
-.ucd h2{
+.ucd h1, .ucd h3{
     color: var(--ucd);
 }
+.html{
+    border-top: 3px solid var(--html);
+}
+.html h1, .html h3{
+    color: var(--html);
+}
+.java{
+    border-top: 3px solid var(--java);
+}
+.java h1, .java h3{
+    color: var(--java);
+}
+.project{
+    border-top: 3px solid var(--project);
+}
+.project h1, .project h3{
+    color: var(--project);
+}
+.media{
+    border-top: 3px solid var(--media);
+}
+.media h1, .media h3{
+    color: var(--media);
+}
+.container .return a{
+    grid-column-start: 1;
+    grid-row-start: row1-start;
+    }
+
 @media (max-width: 768px){
     .aboutme{
         flex-direction: column;
@@ -242,6 +296,12 @@ article h4{
         margin: 0;
         margin-bottom: 0.5em;
     }
+    .images-1{
+        margin: 0;
+        margin-bottom: .5em;
+    }
+
+    
     .close{
         top: 0.5em;
         right: 0.4em;
