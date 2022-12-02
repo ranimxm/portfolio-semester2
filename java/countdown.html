@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link href= "/css/ass.css" rel="stylesheet">    
+    <link href= "/css/cc.css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">logo</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+
+            <h1>Countdown </h1>            
+            <div class="container-cc">
+                <div class="row">
+                    <div class="container-segment">
+                        <div class="segment-title">Days</div>
+                        <div class="segment">
+                          <div class="flip-card" data-days-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-days-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="container-segment">
+                        <div class="segment-title">Hours</div>
+                        <div class="segment">
+                          <div class="flip-card" data-hours-tens>
+                            <div class="top">2</div>
+                            <div class="bottom">2</div>
+                          </div>
+                          <div class="flip-card" data-hours-ones>
+                            <div class="top">4</div>
+                            <div class="bottom">4</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-segment">
+                        <div class="segment-title">Minutes</div>
+                        <div class="segment">
+                          <div class="flip-card" data-minutes-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-minutes-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-segment">
+                        <div class="segment-title">Seconds</div>
+                        <div class="segment">
+                          <div class="flip-card" data-seconds-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-seconds-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+
+            
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/countdown.js"></script>
+
+
+</body>
+</html>

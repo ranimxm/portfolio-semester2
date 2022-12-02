@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Good, Three Bad</title>
+    <title>Basic Challenges</title>
     <link href= "/css/ass.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -59,13 +59,92 @@
         <div class="content java">
 
             <h1>The Basic Challenges</h1>
-            <img src="/img/phh.jpg" class="image-content">
+            <img src="/img/basic.jpg" class="image-content">
             <article>
-                <p></p>
+                <p>Before starting with the intirmidate challenges of Javascript, I thought that it was better if I start with the basic challenges first.
+                    After all I have almost no experience in Javascript and have no idea where to start. I made six basic challenges. The challenges were mostly about manipulating strings and arrays.
+                </p>
+                <nav>
+                    <p>This page is split into six sections: </p>
+                    <li>
+                        <a href="#simpleadding">The First Challenge | Simple Adding</a>
+                    </li>
+                    <li>
+                        <a href="#ff">The Second Challenge | First Factorial</a>
+                    </li>                  
+                    <li>
+                        <a href="#capatilize">The Third Challenge | Letter Capatilize</a>
+                    </li>
+                    <li>
+                        <a href="#longest">The Fourth Challenge | The Longest Word</a>
+                    </li>
+                    <li>
+                        <a href="#reverse">The Fifth Challenge | First Reverse</a>
+                    </li>
+                    <li>
+                        <a href="#change">The Sixth Challenge | Letter Change</a>
+                    </li>
+
+                </nav>
             </article>
 
+        <!-- first one -->
+            <section id="simpleadding">
+                <h3>The First Challenge | Simple Adding</h3>
+                <input type="number" id="num">
+                <button type="button" onclick="SimpleAdding()">Calculate!</button>
+                <p>The point of the challenge was...</p>
+                <img src="/img/simpleadding.jpg" class="image-content">
+                <p>So how did I do it?</p>
+            </section>
+        <!-- second one -->
+            <section class="ff">
+                <h3>The Second Challenge | First Factorial</h3>
+                <input type="number" id="sum">
+                <button type="button" onclick="FirstFactorial()">Result</button>
+                <p>...</p>
+                <img src="/img/ff1.jpg" class="image-content">
+                <p>,,</p>
+            </section>
+        
+        <!-- third one -->
+            <section id="capatilize">
+                <h3>The Third Challenge | Letter Capatilize</h3>
+                <input type="text" id="str">
+                <button type="button" onclick="LetterCapitalize()">capitalize!</button>
+                <p>..</p>
+                <img src="/img/capitalize.jpg" class="image-content">
+                <p>..</p>
+            </section>
+        <!-- fourth -->
+            <section id="longest">
+                <h3>The Fourth Challenge | The Longest Word</h3>
+                <input type="text" id="sen">
+                <button type="button" onclick="LongestWord()">Count the word</button>
+                <p>,,,</p>
+                <img src="/img/longestword.jpg" class="image-content">
+                <p>,,</p>
+            </section>
+        <!-- fifth -->
+            <section id="reverse">
+                <h3>The Fifth Challenge | First Reverse</h3>
+                <input type="text" id="string">
+                <button type="button" onclick="FirstReverse()">Reverse the text!</button>
+                <p>fakka g</p>
+                <img src="/img/reverse.jpg" class="image-content">
+                <p>,,</p>
+            </section>
 
-            
+        <!-- sixth -->
+            <section id="change">
+                <h3>The Sixth Challenge | Letter Change</h3>
+                <input type="text" id="stri">
+                <button type="button" onclick="letterChanges()">Change the letter</button>
+                <p>,,,,</p>
+                <img src="/img/change.jpg" class="image-content">
+                <p>ksksk</p>
+            </section>
+
             <div class="return">
                 <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
             </div>
@@ -98,6 +177,74 @@
     <div class="cursor2"></div>
 
     <script src="/js/index.js"></script>
+    <script>
+        //sixth
+        function letterChanges(stri){
+            str = document.getElementById("stri").value;
+            var result="";
+            for (var i = 0; i < str.length; i++){
+                var letters = str[i];
+             if (letters == "z" ){
+                letters = "a";
+            } else if(str.charCodeAt(i) >= "a".charCodeAt(0) && str.charCodeAt(i) <="z".charCodeAt(0)) {
+                letters = String.fromCharCode(str.charCodeAt(i)+1);
+                
+            }if (letters == "a" || letters =="e" || letters =="i"||letters =="o" ||letters =="u"){
+                letters = letters.toUpperCase();
+            }
+            result+=letters;
+          }
+          return alert (result);
+          };          
+          
+        //fifth
+        function FirstReverse(string){
+            string = document.getElementById("string").value;
+            str = string.split('');
+            var reversedWord=str.reverse().join('');
+            return alert (reversedWord);
+        };
 
+        //fourth
+        function LongestWord(sen) {
+            var sen = document.getElementById("sen").value;
+            str = sen.split(" ");
+            var longestWord = 0;
+        
+            for (i=0; i < str.length; i++){
+              if (str[i].length > longestWord){
+                longestWord = str[i].length;
+              }
+            }; 
+            return alert (longestWord);
+        };
+        
+
+        //third one         
+        function LetterCapitalize(str) {
+            var str = document.getElementById("str").value;
+            var split = str.toLowerCase().split(' ');
+            for (var i = 0; i < split.length; i++) {
+                split[i] = split[i].charAt(0).toUpperCase() + split[i].substring(1);
+            };
+            return alert (split.join(''));
+        }
+    
+        //first one
+        function SimpleAdding(num){
+            num=(document.getElementById("num").value);
+            const adding = num * (num+1)/2;
+            alert("the calculated number is " + adding);
+        };
+        //second one
+        function FirstFactorial(sum) {
+            sum = parseInt(document.getElementById("sum").value);
+            factorial = 1;
+            for (var i =1; i <= sum ; i++){
+                factorial *= i;
+            }
+            return alert("The number is " + factorial);
+        };
+    </script>
 </body>
 </html>

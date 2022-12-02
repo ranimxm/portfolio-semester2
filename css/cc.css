@@ -1,0 +1,123 @@
+ *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+.flip-card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: .1em;
+  }
+  
+  .top,
+  .bottom,
+  .flip-card .top-flip,
+  .flip-card .bottom-flip {
+    height: .75em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+  }
+  
+  .top,
+  .flip-card .top-flip {
+    background-color: #5970ae;
+    border-top-right-radius: .1em;
+    border-top-left-radius: .1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .bottom,
+  .flip-card .bottom-flip {
+    background-color: #5e76b6;
+    display: flex;
+    align-items: flex-end;
+    border-bottom-right-radius: .1em;
+    border-bottom-left-radius: .1em;
+  }
+  
+  .flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+  
+  @keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+  .flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+  
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .container-cc {
+    height: fit-content;
+    padding: .7em;  
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .5em;
+    background-color: #262161;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.838);
+    opacity: .8;
+    width: fit-content;
+    font-size: 2rem;
+  }
+  .container-cc p{
+    font-size: 1rem;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5em;
+    width: max-content;
+
+  }
+  
+.container-segment {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    max-height: 100%;
+    align-items: center;
+    width: max-content;
+  }
+  
+  .segment {
+    display: flex;
+    gap: .1em;
+  }
+  
+  .segment-title {
+    font-size: 1rem;
+  }
+
+
+  @media (max-width: 768px){
+    *{
+        font-size: 1.5rem;
+    }
+    .img{
+        display: none;
+    }
+    .container{
+        width: 80%;
+    }
+  }
