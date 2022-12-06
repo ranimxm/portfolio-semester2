@@ -21,6 +21,7 @@
     --project-hover:rgb(255, 141, 48);
     --media-hover:rgb(223, 255, 141);
 }
+
 html[data-theme='light']{
     --html: blue;
     --java: green;

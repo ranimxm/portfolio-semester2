@@ -8,7 +8,9 @@
   text-decoration: none;
   list-style-type: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 :root, html[data-theme='dark']{
   --background--:#1d1d1d;
   --text--:white;
@@ -16,6 +18,7 @@
   --mousehover: rgba(0, 191, 255, 0.552);
   --background-opacity: .15;
   --hover:rgba(0, 191, 255, 0.549);
+  --scroll:rgb(198, 198, 198);
 
 }
 html[data-theme='light']{
@@ -25,7 +28,21 @@ html[data-theme='light']{
   --mousehover:rgba(12, 65, 172, 0.599);
   --background-opacity: .12;
   --hover:rgba(11, 80, 217, 0.832);
+  --scroll:#d1d1d1;
 
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scroll); 
+}
+ ::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 a:hover, i:hover{
   color: var(--hover);
