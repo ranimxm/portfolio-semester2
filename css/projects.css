@@ -29,7 +29,6 @@ html[data-theme='light']{
     --ucd:orange;
     --media:yellow;
     --active: purple;
-
     --a-hover:rgb(50, 14, 50);
 }
 .active:hover{
@@ -50,8 +49,6 @@ html[data-theme='light']{
 .project:hover{
     color: var(--project-hover);
 }
-
-
 
 main{
     z-index: 2;

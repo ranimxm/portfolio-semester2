@@ -240,31 +240,31 @@ section input{
 .ucd{
     border-top: 3px solid var(--ucd);
 }
-.ucd h1, .ucd h3{
+.ucd h1, .ucd h3, #ucd{
     color: var(--ucd);
 }
 .html{
     border-top: 3px solid var(--html);
 }
-.html h1, .html h3{
+.html h1, .html h3, #html{
     color: var(--html);
 }
 .java{
     border-top: 3px solid var(--java);
 }
-.java h1, .java h3{
+.java h1, .java h3, #java{
     color: var(--java);
 }
 .project{
     border-top: 3px solid var(--project);
 }
-.project h1, .project h3{
+.project h1, .project h3, #project{
     color: var(--project);
 }
 .media{
     border-top: 3px solid var(--media);
 }
-.media h1, .media h3{
+.media h1, .media h3, #media{
     color: var(--media);
 }
 .container .return a{

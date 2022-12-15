@@ -12,6 +12,7 @@
 }
 
 :root, html[data-theme='dark']{
+  --mouse: white;
   --background--:#1d1d1d;
   --text--:white;
   --boxes--: rgba(0, 191, 255, 0.193);
@@ -22,6 +23,7 @@
 
 }
 html[data-theme='light']{
+  --mouse: #1d1d1d;
   --background--:white;
   --text--:black;
   --boxes--: rgba(12, 66, 172, 0.2);
@@ -43,10 +45,6 @@ html[data-theme='light']{
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
-}
-a:hover, i:hover{
-  color: var(--hover);
-  transition: .3s ease-in-out;
 }
 
 #sun-button{
@@ -231,7 +229,7 @@ footer{
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  border: 1px solid black;
+  border: 1px solid var(--mouse);
   transition: all 200ms ease-out;
   position: fixed;
   pointer-events: none;
@@ -242,7 +240,7 @@ footer{
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: black;
+  background-color: var(--mouse);
   opacity: .3;
   position: fixed;
   transform: translate(-50%, -50%);

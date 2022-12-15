@@ -29,13 +29,14 @@ let dy = 0;
 const snakeboard = document.getElementById("snakecanvas");
 const snakeboard_ctx = snakeboard.getContext("2d");
 
-
+var gaming= new Audio("/audio/grand-final-orchestral-tutti-9927.mp3")
+var lose = new Audio ("/audio/error-1-126514.mp3");
 
 function Game(){
     //start game
     gameProgress();
     food();
-
+    gaming.play();
 
     //main function to keep every function running inthe game
     function gameProgress(){
@@ -84,7 +85,8 @@ function Game(){
     function gameOver() {
         for (let i = 4; i < snake.length; i++) {
             if (snake[i].x === snake[0].x && snake[i].y === snake[0].y){
-                alert('gameover');
+                lose.play();
+                alert("gameover");
                 return true;
             };
         };
@@ -93,9 +95,11 @@ function Game(){
         const toptWall = snake[0].y < 0; //toomuch top
         const bottomWall = snake[0].y > snakeboard.height - 10; //toomuch bottom
         if( leftWall || rightWall || toptWall || bottomWall){
-            alert('gameover');
+            lose.play();
+            alert("gameover");
             return true;
         };
+
     };
     //food generator
     function random_food(min, max) {
@@ -128,7 +132,7 @@ function Game(){
         const head = {x: snake[0].x + dx, y: snake[0].y + dy};
         snake.unshift(head);
         const has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
-    
+        var eat = new Audio ("/audio/TCD25PS-game-success.mp3")
         console.log(snake.length);
         if (has_eaten_food) {
           // const shorter = {x: snake[2].x + dx - 2, y: snake[2].y + dy - 2};
@@ -138,6 +142,7 @@ function Game(){
           food();
           const shorter = {x: snake[4].x, y: snake[4].y}
           snake.shift(shorter);
+          eat.play();
           console.log("eaten",snake.length);
         } else {
             if (timer >= 40){
