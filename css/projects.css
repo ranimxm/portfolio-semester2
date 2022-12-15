@@ -75,6 +75,7 @@ main{
 .filter h2{
     margin-bottom: 1em;
 }
+
 .boxes-filter{
     display: flex;
     flex-direction: row;

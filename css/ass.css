@@ -89,9 +89,7 @@ article h4, section h4 {
 .container nav h2{
     margin-bottom: 1em;
 }
-.categories li a:hover{
-    color: var(--hover);
-}
+
 .content{
     width: 55em;
     max-width: 100%;
@@ -230,6 +228,9 @@ section input{
     border: none;
     margin-right: 2em;
     background-color: var(--input);
+}
+section input:focus{
+    outline: none;
 }
 .content section h3{
     line-height: 3em;

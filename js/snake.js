@@ -152,7 +152,7 @@ function Game(){
           eat.play();
           console.log("eaten",snake.length);
         } else {
-            if (timer >= 40){
+            if (timer >= 10){
                 const longer = {x: snake[1].x + dx, y: snake[1].y + dy};
                 snake.unshift(longer);
                 timer = 0;
