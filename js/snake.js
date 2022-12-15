@@ -29,7 +29,7 @@ let dy = 0;
 const snakeboard = document.getElementById("snakecanvas");
 const snakeboard_ctx = snakeboard.getContext("2d");
 
-var gaming= new Audio("/audio/grand-final-orchestral-tutti-9927.mp3")
+var gaming= new Audio("/audio/Zonnie M - Zon Op M'n Piemel (Officiële Videoclip)_Zomerhit 2022_.mp3")
 var lose = new Audio ("/audio/error-1-126514.mp3");
 
 function Game(){
