@@ -72,11 +72,52 @@
                     with the CSS variables for the dark/light mode. In any case this game is only avaible on laptop and is not responsive
                     (less work for me I should say).
                 </p>
+                <p>
+                    Most of the game was already decoded by our teacher however I wanted to challenge myself by just not only using his code but also put it inside
+                    of a html5 canvas and playing with the arrays. Of course I used the code from the teacher as reference. 
+                </p>
             </section>
             <section>
-                <h3>How Does It Work?</h3>
-                <h3>Drawing The Snake + Food</h3>
-                <h3>Making The Snake Smaller</h3>
+                <h3>Before coding the script</h3>
+                <p>
+                    First I made a canvas in html with the width and height. The only thing I need to style for now was to place the canvas in the middle and make a border. The rest will be everything inside of javasctipt. 
+                </p>
+                <h3>Drawing The Snake</h3>
+                <p>
+                    The first part of making this game work was setting up the canvas and the placement of the snake. First I made the canvas using the  .fillstyle/.srtokestyle/.fillrect. I will put this inside the function, the reason will 
+                    be explained later. After that drawing the snake using the same way I drew the canvas. The colors are put inside a  const. for each is an array function, so the snake is an array. The x and y are the with and height of the snake. 
+                </p>
+                <img src="/img/snake1.png">
+                <p>
+                    I also made the snake placement at the start of the game inside an array: 
+                </p>
+                <img src="/img/snake2.png">
+
+                <h3>Making The Snake Smaller + move</h3>
+                <p>After that I made the snake move using the keyboards. Luckily everything was explained in class so I didn’t had to search much 
+                    about it aside from making it work inside my code. Now that the snake is able to move the next part is making the movement visible. I put this inside the function. 
+                </p>
+                <img src="/img/snake3.png">
+                <p>
+                    First thing was creating the snake head and putting it inside the const so that I can use it. By dividing the x and y and making it the first of the array [0], I was able to divine the head of the snake. Next I was just playing with the array properties using unshift(),shift() and unshift() I was able to make the 
+                    snake longer and shorter. The rules of this game was when the snake eats food it will become shorter or else it will become longer, so by making an if else statement inside the function I was able to divine what will happen if it eats or not. With each eating food it will get longer, so the scare will get higher and will update the number inside the html and will become shorter. The array.shift() will make it shorter by removing the last number of array inside the snake (this time the number 4). 
+                    If it has not eating it will become longer using the array.unshift(). This will add more elements to the length of an array. I also put an timer to make sure it wont go too long in a short period of time using an setinterval. At the end of the function and outside the if/else statement I used array.pop(). This will make the snake/array move by placing the last element to the front. 
+                </p>
+                <p>
+                    As you already can see, I put audio elements with it to make the game more “thrilling”. 
+                </p>
+                <h3>The gameover function</h3>
+                <img src="/img/snake4.png">
+                <p>Next I made a gameover function. basically what this does is it will check if the array will hit itself (his own array) or if it hits the canvas. 
+
+                </p>
+                <p>
+                    After making everything. I put it inside the function. The function gameprogress will check if the game has ended and if it really does. The timer is for the snake making longer as I described in the previous function. 
+                </p>
+                <p>
+                    After putting the snake game inside the portfolio I noticed that the whole page will go down or up using the keyboard events. By using the code you see underneath it will prevent it from happening. It checks if the event is any of the keyboards I used in the game and it will prevent the e/event form effecting the window. 
+                </p>
+                <img src="/img/snake5.png">
             </section>
 
 

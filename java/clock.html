@@ -85,13 +85,24 @@
             </p>
             <section>
                 <h3>The Clock in CSS</h3>
-                <img src="/img/clockcss.jpg" class="image-content">
-                <p>The challenge of this was not only Javascript, but also CSS. I had to think about from where the hand should transform and how to place the numbers.</p>
+                <p>
+                    At first I just made an ul list with hand, minutes and seconds counter. After that just wrote down the numbers from 1 to 12, just like any clocks you 
+                    see in your daily life. Before doing the css I just know that all the three hands will be the same, although the hours/minutes/hands counter will be different with size and height so I gave it their own class name, makes it easier to style it.                 
+                </p>
+                <img src="/img/clockcss.jpg">
+                <p>
+                    Then I started out with the styling. Firstly make the container in a circle and place it in the middle. There is no reason as to why it is in the middle. Afterwards I placed the numbers. I used position:relative inside the container/.clock and used position:absolute for the numbers. This way the placement will be connected and/or depended on the container. then I just set the var=0 and made the numbers in degrees. Now the hands, they will change placement after using javascript so I had to think about from where it will transform: 
+                    which is the bottom. So I used transform-origin:bottom at the hand and then use transform:translate and calculate the rotation per degree.  
+                </p>
+
             </section>
             <section>
                 <h3>The Clock in Javascript</h3>
-                <img src="/img/clockjava.jpg" class="image-content">
-                <p></p>
+                <img src="/img/clockjava.jpg">
+                <p>
+                    Now the javascript. first use an interval which updates the code for every milisecond I provided. Then just get the time of each hour,seconds and minutes and put them in a variable using data-category. 
+                    Then make a function which gets the current time and divide it into the correct time for the clock. At last I make another function which will change the style using the var() I made in the css and it will update it every interval I set at the beginning.
+                </p>
             </section>
 
 

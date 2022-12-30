@@ -57,43 +57,76 @@
             </ol>
         </nav>
 
-        <div class="content media">
+        <div class="content java">
 
             <h1>Calculator </h1>
-            <img src="/img/calcu.jpg" class="image-content">
+            <div class="calculator-grid">
+                <div class="output">
+                  <div data-previous-operand class="previous-operand"></div>
+                  <div data-current-operand class="current-operand"></div>
+                </div>
+            
+                <button data-all-clear class="span-two">AC</button>
+                <button data-delete>DEL</button>
+                <button data-operation>÷</button>
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operation>*</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operation>+</button>
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operation>-</button>
+                <button data-number>.</button>
+                <button data-number>0</button>
+                <button data-equals class="span-two">=</button>
+              </div>
+
             <section>
                 <p>Making a working calculator... Instead of using display:flex I thought of challenging myself with 
                     display:grid, since it also has its own perk.
                 </p>    
+                <h3>Making the html page and css</h3>
+                <img src="/img/calc1.png"> 
+                <p>
+                    The first thing I did was to make an container for the calculator. This time I wanted to use grid, just to test it out and to make the boxes uneven. Then I make a .output which displays the numbers you clicked. It will show the previous and current number. Next I made the buttons for the calculator, I used an iphone calculator as reference. I already wrote down the attributes so that I wont have to check it later when writing the code. The styling has nothing special going on aside from me using display:grid as a challenge.  
+                </p> 
+
             </section>
             <section>
-                <div class="calculator-grid">
-                    <div class="output">
-                      <div data-previous-operand class="previous-operand"></div>
-                      <div data-current-operand class="current-operand"></div>
-                    </div>
-                
-                    <button data-all-clear class="span-two">AC</button>
-                    <button data-delete>DEL</button>
-                    <button data-operation>÷</button>
-                    <button data-number>1</button>
-                    <button data-number>2</button>
-                    <button data-number>3</button>
-                    <button data-operation>*</button>
-                    <button data-number>4</button>
-                    <button data-number>5</button>
-                    <button data-number>6</button>
-                    <button data-operation>+</button>
-                    <button data-number>7</button>
-                    <button data-number>8</button>
-                    <button data-number>9</button>
-                    <button data-operation>-</button>
-                    <button data-number>.</button>
-                    <button data-number>0</button>
-                    <button data-equals class="span-two">=</button>
-                  </div>
-            
-    
+                <h3>Making the buttons inside Javascript</h3>
+                <img src="/img/calc2.png">
+                <p>
+                    After that I will make the buttons functional using JavaScript. the first thing I thought of was how to display the data? First I will make a class calculator with a constructor which makes two arguments: previous and current. It will also use the .clear() method. This makes the calculator/input into an empty string. After making the class I will write down the functions I need to make the calculator functional: clear, delete, current and previous operand, the numbers and the operations and the equal sign. Now I will start making the functions functional.
+                    First lets I made a const to update the calculator input with the currentOperand and previousOperand. After that I will make an addeventlistener for every buttons. For each button it will use their corresponded function (for example the number buttons will use the appendnumber() and the operation button will use chooseoperation()) and then it will display it on the calculator using the updateDisplay(). I will use this method for each button on the calculator.
+                </p>
+                <img src="/img/calc3.png">
+                <p>
+                    Next I will make the functions actually functional. The first thing I did was to make the input into a string. This is to make JavaScript actually append the string and not just add them to each other. For example if you click 1 + 1 it will become 2 and not 11. You can also see the if … return. This is to prevent the calculator to add multiple dots inside the string. So if the parameter (number) has an dot then it will return and stops the function.. functioning. 
+                </p>
+                <img src="/img/calc4.png">
+                <p>
+                    The next thing I made are the operations of the calculator.  First I made the display using this.opreation.. etc. The empty string is to make the numbers which was clicked before the operation, go above. So the current operand is empty after using an operation. Next I want to prevent the to clear the display even if we have no current operand. To do this I used an if statement and it will check if the current operand is actually empty and if it does it will return which will end the function. 
+                </p>
+
+                <img src="/img/calc5.png">
+                <p>
+                    After making the two operation work it is time to make it actually calculate the numbers. To do this I will use the calculation function. For this I first have to make a variable for the result, this is the let calculation.  Next is to make the previous and current typed string into an actual number using parseFloat(). Afterwards I will use the switch/case statement and define the operations. If there is none of the operations clicked then it will return.
+                </p>
+                <p>
+                    Once this is done I will make the clear and delete function. The clear function is basically making the current and previous operand an empty string and the operation undefined. This way it will just erase the string and Javascript wont be using them. Then the clear function is making the current and previous operand into an string and then using the .slice() it will remove the string number/element once.
+                </p>
+            </section>
+            <section>
+                <h3>The display</h3>
+                <img src="/img/calc6.png">
+                <p>
+                    Next I will make an updateDisplay function which basically updates the display with the previous and current typed in number. 
+                </p>
             </section>
 
             

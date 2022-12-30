@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+:root {
+--background:white;
+    --bb: #fafafa;
+    --box: rgba(60, 80, 195, 0.849);
+    --text:white;
+    }
+body{
+    display: flex;
+    background-color: var(--bb);
+    flex-direction: column;
+    gap: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 80%;
+    align-self: center;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 1em;
+}
+.ff{
+    align-self: center;
+    font-size: larger;
+    font-weight: bold;
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+label{
+    padding: 1em;
+    width: max-content;
+    height: max-content;
+    background-color: var(--box);
+    color: var(--text);
+    border: none;
+}
+input{
+    padding: 1em;
+    border: 1px solid var(--box);
+}
+input:focus{
+    outline: none;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    align-items: flex-start;
+    gap: 2em;
+    height: auto;
+    padding: 1em;
+    width: 80%;
+    background-color: var(--background);
+    align-self: center;
+}
+
+ol img{
+    max-width: 100%;
+    width: 20em;
+    height: max-content;
+}
+ol dl{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+dt{
+    font-weight: bolder;
+}
+#classmate-list{
+list-style: none;
+}
+ol#classmate-list > li{
+    background: white;
+    position: relative;
+    border-radius:  0 0.5rem 0.5rem 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    counter-increment: myCounter;
+}
+
+ol#classmate-list > li::before,
+ol#classmate-list > li::after{
+    border-radius: 1rem 1rem 0 1rem;
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+}
+ol#classmate-list > li::before{
+    content: counter(myCounter) ".";
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+    color: var(--text);
+    background-color: var(--box);
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: center;
+    align-items:center ;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+}
+
+@media (max-width: 768px){
+    li{
+        flex-direction: column;
+    }
+    br{
+        display: none;
+    }
+}

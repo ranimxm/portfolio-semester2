@@ -3,7 +3,6 @@ const board_background = "white";
 const snake_col = 'lightblue';
 const snake_border = 'darkblue';
 
-var currentTheme = document.documentElement.getAttribute("data-theme");
 
 
 let snake = [
@@ -116,7 +115,7 @@ function Game(){
     function food() {
         food_x = random_food(0, snakeboard.width - 10);
         food_y = random_food(0, snakeboard.height - 10);
-        // if the new food location is where the snake currently is, generate a new food location
+         // if the new food location is where the snake currently is, generate a new food location
         snake.forEach(function has_snake_eaten_food(part) {
             const has_eaten = part.x == food_x && part.y == food_y;
             if (has_eaten) food();
@@ -170,7 +169,7 @@ function retry(){
 
 // doesnt make the whole page go up and down while playing the game
 window.addEventListener("keydown", function(e) {
-    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+    if(["ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
     }
 }, false);

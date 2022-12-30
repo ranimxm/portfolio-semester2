@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON fetch</title>
+    <link href= "/css/ass.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">logo</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+            <h1>Dummy JSON fetch</h1>
+            <img src="/img/json.png" class="image-content">
+            <p>
+                For this challenge I fetched a dummy JSON file and displayed the data inside the html and made a search function. I didnt really check out the css styling, since
+                this challenge mostly was about fetching the dummy json and display it inside the html.
+            </p>
+            <p>You can see the live demo <a href="/Ass/classFetch/index.html" target="_blank">here.</a></p>
+            <section>
+                <h3>Making it fetch</h3>
+                <img src="/img/js1.png">
+                <p>
+                    First I fetched the gummyjson the way it was explained on the site itself. Afterwards I put the fetch inside the contentloaded function. This is to display the data whenever the window is loaded. The window.classmate is a global variable which holds the content of the fetched data.users.
+                </p>
+                <img src="/img/js2.png">
+                <p>
+                    After that I made a function displayclassmate. Inside this I put the global variable inside the html id list. Then I made a search function where the input date will be converted into lowercase and it will search the firstname and the email of the data. When searching it will clear the list whenever the search function is being used or typed in. Next I make a new li element for each user inside the data I fetched. After that I use the document.appendchild.. inside the loop, which reads each user in the filtered data list(aka classmate list). 
+                </p>
+                <img src="/img/js3.png">
+                <p>
+                    Outside the function I wrote down an addeventlistener input for the search function. This will call the displayclassmate() function whenever the user types something inside the search bar.
+                </p>
+    
+            </section>
+
+
+            
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    
+</body>
+</html>
