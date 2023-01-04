@@ -283,6 +283,7 @@ section input:focus{
     grid-column-start: 1;
     grid-row-start: row1-start;
     }
+
     @media (max-width: 1000px){
         .container nav{
             margin-right: 0;
@@ -291,6 +292,7 @@ section input:focus{
             width: 92%;
         }
     }
+
 @media (max-width: 768px){
     .container nav{
         margin-right: 0;

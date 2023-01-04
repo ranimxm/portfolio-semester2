@@ -168,7 +168,9 @@ figcaption{
     padding: 1em;
     max-width: 100%;
 }
-
+.boxes-filter{
+    width: 100%;
+}
 .ucdtop{
     border-top: 3px solid var(--ucd);
 }
@@ -186,6 +188,7 @@ figcaption{
 }
 
 @media (max-width: 768px){
+
     .projects-main{
      margin-left: 10px;
      padding: 0;
