@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Research</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html" >Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+
+            <h1>Basic Research</h1>
+            <img src="/img/ja.webp" class="image-content">
+            <p>
+                Before starting with coding Javascript challenges, I made a short research about the statements of Javascript using the mobile app: sololearn. It teaches everyone the basic concepts of Javascript and gives us a small project to finish about a certain project.
+                Aside the lectures I got from my teacher, this app helped me to take a "step" further into Javascript.
+            </p>
+            <p>You can also read the 
+                <a href="/files/Javascript.pdf" target="_blank">PDF file</a> I worked on.
+            </p>
+            <ol>
+                There are few things I noted down and learned from the app:
+                <li> <a href="#basic">Basic Concepts</a></li>
+                <li> <a href="#conditional">Conditional and Loops</a></li>
+            </ol>
+            <section id="basic">
+                <h2>Basic Concepts</h2>
+                <ol>
+                    Table of content:
+                    <li> <a href="#first">Parameters</a></li>
+                    <li> <a href="#second">String</a></li>
+                    <li> <a href="#third">Data types</a></li>
+                    <li> <a href="#fourth">Math operators</a></li>
+                    <li> <a href="#fifth">Assignment operators</a></li>
+                    <li> <a href="#six">Comparison operators</a></li>
+                    <li> <a href="#seven">Boolean operators</a></li>
+                    <li> <a href="#eigth">Conditional (ternary) operators</a></li>
+                </ol>
+                <!-- first -->
+                <h3 id="first">Parameters</h3>
+                <p>
+                    Function parameters are the names listed in the function definition.
+                    Function arguments are the values received by the function.
+                </p>
+                <!-- second -->
+                <h3 id="second">String</h3>
+                <ol>
+                    There r multiple functions/manipulations with string but for now lets talk bout .substring.
+                    <li>- If you write down 2 parameters, it will slice down the rest of the string</li>
+                    <li>-	If the parameter is negative, it will count backwards</li>
+                    <li>-	Its like the string I learned when using python, almost the same.</li>
+                </ol>
+                <!-- third -->
+                <h3 id="third">Data types</h3>
+                <ol>
+                    <li>-	String</li>
+                    <li>-	Booleans</li>
+                    <li>-	symbol</li>
+                    <li>-	undefined</li>
+                    <li>-	object</li>
+                    <li>-	function</li>
+                    <li>-	number</li>
+                </ol>
+                <!-- fourth -->
+                <h3 id="fourth">Math operators</h3>
+                <p>++ = increment, var a = 10, a++: now a = 11</p>
+                <p>--  = decrement, var a=10, a--: now a = 9</p>
+                <!-- fifth -->
+                <h3 id="fifth">Assignment operators</h3>
+                <p>It is like += is the same as x = x + y, so var number = 20. Number += 5; outcome is: 25.</p>
+                <!-- six -->
+                <h3 id="six">Comparison operators</h3>
+                <table>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>Equal to</td>
+                        <td>5 == 10 false</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>Identical(equal and of the same type)</td>
+                        <td>5 === 10 false</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Not equal to</td>
+                        <td>5!=10 true</td>
+                    </tr>
+                    <tr>
+                        <td>!===</td>
+                        <td>Not identical</td>
+                        <td>10!=10 false</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>Greater than</td>
+                        <td>10 > 5 true</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>Greater than or equal to</td>
+                        <td>10>=5 true</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Less than</td>
+                        <td>10< 5 false</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Less than or equal to</td>
+                        <td>10>==5 false</td>
+                    </tr>
+                </table>
+                <p>They only work if compared with the same data type; numbers with numbers, strings with string etc.</p>
+                <!-- seven -->
+                <h3 id="seven">Boolean operators</h3>
+                <p>&& = returns true if both operands are true</p>
+                <p>|| = returns true, if one of the operands is true</p>
+                <p>! = returns true if the operand is false and false if the operand is true</p>
+                <mark>You can check all type of data; comparison operator`	s always return true or false</mark>
+                <!-- eight -->
+                <h3 id="eigth">Conditional (ternary) operators</h3>
+                <p>This is how it will look like:
+                    <li>Variable = (condition) ? value!: value2</li>
+                </p>
+                <p>Example:
+                    <li>Var isAdult = (age< 18) ? ‘too young’: ‘old enough’;</li>
+                </p>
+                <p>
+                    If the var age value is below 18, the value of isAdult will be ‘too youn’ and vice versa. 
+                    <li>
+                        <mark>Logical NOT returns true if the operand is false. </mark>
+                    </li>
+                </p>
+                <p>
+                    String operators with concatenation
+                    Basically the syntax will look like this:
+                    <li>Var name = statement ? if statement: else statement;</li>
+                </p>
+            </section>
+            <section id="conditional">
+                <h3>Conditional and Loops</h3>
+                <ol>
+                    Table of content:
+                    <li> <a href="#ten">The if statement</a></li>
+                    <li> <a href="#eleven">Else if statement</a></li>
+                    <li> <a href="#twelve">Switch</a></li>
+                    <li> <a href="#thirteen">For loops</a></li>
+                    <li> <a href="#fourteen">While loop</a></li>
+                    <li> <a href="#fifteen">The do.. while loop</a></li>
+                    <li> <a href="#sixteen">Break keyboard</a></li>
+                </ol>
+                <!-- ten -->
+                <h3 id="ten">The if statement</h3>
+                <p>We use if to specify a block of code that we want to be executed if a specified condition is true.
+                    <pre>
+                        If (condition) {
+                            Statements
+                        }
+                    
+                    </pre>
+                </p>
+                <p>
+                    The statements will only be executed if the specify condion is true. the function will act like the function doesn’t exist if its false.
+                    Alert() is an automatic function in javascript,
+                    which generate a popup alert box.                   
+                </p>
+                <p>
+                    We can use the else statement to specify a block of code that will be execute if the condition is false.
+                    <pre>
+                        If (expression) {
+                            //executed if condition is true
+                        }
+                        Else {
+                            //executed if condition is false
+                        }                    
+                    </pre>
+                </p>
+                <mark>
+                    There is another way to do this check (var1 > var2 for example) using the ? operator: 
+a > b ?  alert(a) : alert(b). 
+                </mark>
+                <p>(Check back to <a href="#eight">Conditional operators</a>)</p>
+                <!-- eleven -->
+                <h3 id="eleven">Else if statement</h3>
+                <p>
+                    The else if statement is useful because it lets us specify a new condition if the first condition is false.
+                    Example:
+                    <pre>
+                        Var course = 1;
+                        If (course == 1) {
+                            Document.write(“html tutorial”);
+                        } Else if (course == 2){
+                            Document.write(“css tutorial”);
+                        } Else {
+                            Document.write(“javascript tutorial”);
+                        }
+                    </pre>
+                </p>
+                <ol>
+                    This is whats happening:
+                    <li>-	If course is equal to 1: output html tutorial</li>
+                    <li>-	Else if course is equal to 1: output css tutorial;</li>
+                    <li>-	If none of the above condition is true then outpur: javascript tutorial.</li>
+                    Course is equal to 1 so we get the first statement.
+                </ol>
+                <mark>
+                    The final else statement ‘ends’ the else if statement.
+                    It should always be written after the is and else if statements.
+                </mark>
+                <!-- twelve -->
+                <h3 id="twelve">Switch</h3>
+                <p>
+                    We can use the switch statement to perform different actions based on different conditions. 
+                    <pre>
+                        Switch (expression){
+                            Case n1:
+                                Statements
+                                Break;
+                            Case n2:
+                                Statements
+                                Break;
+                            Default:
+                                Statements
+                        }                    
+                    </pre>
+                </p>
+                <p>
+                    This expression is evaluated once. The value of the expression is compared with the values pf each case and if theres a match, that block of code is executed. 
+                <mark>
+                    You can write as many case statements as you need.
+                </mark>
+            </p>
+            <p>
+                The break keyword essentially switches the switch statement off. Breaking out of the switch block stops the execution of more code and case testing inside the block.
+                <li>Usually a break should be put in each case statement.</li>
+                Often there will be no match, but we still need the program to output something.. for this we use the default keyword which specifies the code to run if theres no case match.
+            </p>
+            <!-- thirteen -->
+            <h3 id="thirteen">For loops</h3>
+            <p>
+                Javascript has three types of loops: for, while and do.
+            </p>
+            <p>
+                The classic for loop:
+                <pre>
+                    For (statement1; statement2; statement3) {
+                        Code  block to be executed
+                    }                
+                </pre>
+                Or (same code but different wording):
+                <pre>
+                    For (initialization ; condition ; iteration){
+                        Code block to be executed
+                    }                
+                </pre>
+            </p>
+            <ol>
+                <li>-	Statement 1 is executed before the loop (the code block) starts</li>
+                <li>-	Statement 2 defines the condition for running the loop</li>
+                <li>-	Statement 3 is executed each time after the loop has been executed.</li>
+            </ol>
+            <p>
+                As you can see, the classic for loop has three components, or statements.
+You can also initiate more than one value in statement 1, using commas to separate them.
+If statement 2 returns true, the loop will start over again, if it returns false, the loop will end. Statement 2 is also optional but only if you put a break inside the loop or else it will never end!
+
+            </p>
+            <p>
+                Statement 3 is used to change the initial variable. It can do anything and it is also optional only if you increment your values inside the loop, like this:
+                <pre>
+                    Var 1 = 0;
+	                For (; I < 10; ){
+		                Document.write(i);
+		                i++
+	                }
+                </pre>
+            </p>
+            <!-- fourteen -->
+            <h3 id="fourteen">While loop</h3>
+            <p>
+                The while loop repeats through a block of code, but only as long as specified condition is true. 
+                <pre>
+                    While (condition){
+                        Code block
+                    }                
+                </pre>
+
+            </p>
+            <p>
+                The condition can be any conditional statement that returns true or false(a Boolean value).
+                Example:
+                <pre>
+                    Var i=0;
+                    While (i <= 10) {
+                        Document.write( i + “ < br/>”);
+                        i ++; // of je can i = i + 1;
+                    }
+                </pre>
+The loop in this code will continue to run as long as i is less than or equal to 10. And each time the loop runs, it will increase by 1. 
+Make sure that the condition in a while loop eventually becomes false.
+
+            </p>
+
+            <!-- fifteen -->
+            <h3 id="fifteen">The do... while loop</h3>
+            <p>
+                This loop will execute the code block once, before checking if the condition is true, and then it will repeat the loop as long as the condition is true.
+                <pre>
+                    Do {
+                        Code block
+                    }
+                    While (condition);                
+                </pre>
+                Note the semicolon at the end of the do..while loop.
+            </p>
+            <!-- sixteen -->
+            <h3 id="sixteen">Break keyboard</h3>
+            <ol>
+                There are 3 different ways to stop a loop:
+                <li>-	Using the break keyword</li>
+                <li>-	Return</li>
+                <li>-	Continue </li>
+            </ol>
+            <p>
+                Unlike the break statement, the continue statement breaks only one iteration in the loop and continues with the next iteration.
+            </p>
+            <p>
+                Example:
+                <pre>
+                    For (i=0; i<=10; i++){
+                        If (i==5) {
+                            Continue;
+                        }
+                        Document.write(i+”< br/>”);
+                    }
+                </pre>
+                The value 5 will not be printed because continue skips that iteration of the loop.
+            </p>
+            </section>
+
+            
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+
+</body>
+</html>

@@ -7,6 +7,8 @@
     <title>Progressive Web Application</title>
     <link href= "/css/ass.css" rel="stylesheet">    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta content="7; https://scara.netlify.app/"/>
+
 
 </head>
 <body>
@@ -68,7 +70,8 @@
                 <li> <a href="#first">Setting up the application</a></li>
                 <li> <a href="#second">Icon animation</a></li>
                 <li> <a href="#third">The music playlist and buttons</a></li>
-                <li> <a href="#fourth">Making the media navigation / MEdiasesstion API</a></li>
+                <li> <a href="#fourth">Making the media navigation / Mediasesstion API</a></li>
+                <li> <a href="#fifth">Showcase using a stimulator online</a></li>
             </ol>
             <section id="first">
                 <h3>Setting up the application</h3>
@@ -157,9 +160,16 @@
                     Since the main functionality is done for the music “app”, I started out with the mediasession. After a lot of trial and error I found out that the mediasession MUST be on the top of the javascript file, never on the bottom. So I first put the mediaSession.metadata on top of the file. After that I made a function which will call the mediasession. What this does is it checks if the mediaSession is inside the navigator, and if it does then it will show the title, artist and artwork from the current music. After that I made the setActionHandler. These are the functions you usually see in every audioplayer or videoplayer. Since I only made the play, pause, previous and next functions, I will only use those four. I also put the corresponded function inside the actionHandler, which will update both on the website and on the navigator. Once the function setMediaMetaData is finished, I recalled this function on multiple other functions inside the code to make it work. 
                 </p>
             </section>
-            <p>
-                After writing 302 lines of code it is finally done. You can visit the website yourself or you can check out these window stimulators.
-            </p>
+            <section id="fifth">
+                <h3>Showcase using a stimulator online</h3>
+                <p>
+                    After writing 302 lines of code it is finally done. You can visit the <a href="https://scara.netlify.app/" target="_blank">website</a> yourself or you can check out this window stimulators.
+                </p>
+                <p>It shows you how it will look like on the mobile.</p>
+                <video controls width="100%">
+                    <source src="/img/videos.mp4">
+                </video>
+            </section>
 
             <div class="return">
                 <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
