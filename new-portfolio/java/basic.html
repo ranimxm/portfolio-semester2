@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Challenges</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+
+            <h1>The Basic Challenges</h1>
+            <img src="/img/basic.jpg" class="image-content">
+            <article>
+                <p>Before starting with the intirmidate challenges of Javascript, I thought that it was better if I start with the basic challenges first.
+                    After all I have almost no experience in Javascript and have no idea where to start. I made six basic challenges. The challenges were mostly about manipulating strings and arrays.
+                </p>
+                <nav>
+                    <p>This page is split into six sections: </p>
+                    <li>
+                        <a href="#simpleadding">The First Challenge | Simple Adding</a>
+                    </li>
+                    <li>
+                        <a href="#ff">The Second Challenge | First Factorial</a>
+                    </li>                  
+                    <li>
+                        <a href="#capatilize">The Third Challenge | Letter Capatilize</a>
+                    </li>
+                    <li>
+                        <a href="#longest">The Fourth Challenge | The Longest Word</a>
+                    </li>
+                    <li>
+                        <a href="#reverse">The Fifth Challenge | First Reverse</a>
+                    </li>
+                    <li>
+                        <a href="#change">The Sixth Challenge | Letter Change</a>
+                    </li>
+
+                </nav>
+            </article>
+
+        <!-- first one -->
+            <section id="simpleadding">
+                <h3>The First Challenge | Simple Adding</h3>
+                <input type="number" id="num">
+                <button type="button" onclick="SimpleAdding()">Calculate!</button>
+                <img src="/img/simpleadding.jpg" class="image-content">
+                <p>This just takes the parameter from the html and makes it .value. then it will calculate the simple adding and then it will alert us the result.
+                </p>
+
+            </section>
+        <!-- second one -->
+            <section class="ff">
+                <h3>The Second Challenge | First Factorial</h3>
+                <input type="number" id="sum">
+                <button type="button" onclick="FirstFactorial()">Result</button>
+                <img src="/img/ff1.jpg" class="image-content">
+                <p>As the first challenge, it will take the value of the parameter from the html. Then I will make an for statement and calculate the first factorial. 
+                    If it is calculated or not, the function will end by the return and alert us the new calculated factorial.
+                </p>
+            </section>
+        
+        <!-- third one -->
+            <section id="capatilize">
+                <h3>The Third Challenge | Letter Capatilize</h3>
+                <input type="text" id="str">
+                <button type="button" onclick="LetterCapitalize()">capitalize!</button>
+                <img src="/img/capitalize.jpg" class="image-content">
+                <p>This one will make the string to low letters and separate them to make it an array using the .split() function. then it will check the string and capitalize 
+                    the first letter, or the first element of the array. After that it will return and join the array into a string using the array.join() function.
+                </p>
+            </section>
+        <!-- fourth -->
+            <section id="longest">
+                <h3>The Fourth Challenge | The Longest Word</h3>
+                <input type="text" id="sen">
+                <button type="button" onclick="LongestWord()">Count the word</button>
+                <img src="/img/longestword.jpg" class="image-content">
+                <p>
+                    First i will split the string using the array.split(). Then it will check the array length using the array[]1.length. 
+                </p>
+            </section>
+        <!-- fifth -->
+            <section id="reverse">
+                <h3>The Fifth Challenge | First Reverse</h3>
+                <input type="text" id="string">
+                <button type="button" onclick="FirstReverse()">Reverse the text!</button>
+                <img src="/img/reverse.jpg" class="image-content">
+                <p>
+                    Again, making the string into an array using the .split() and then I use the array.reverse() to reverse the array. And then I join the array together into a string with .join(). 
+                </p>
+            </section>
+
+        <!-- sixth -->
+            <section id="change">
+                <h3>The Sixth Challenge | Letter Change</h3>
+                <input type="text" id="stri">
+                <button type="button" onclick="letterChanges()">Change the letter</button>
+                <img src="/img/change.jpg" class="image-content">
+                <p>
+                    I had to make an for elseif loop. This is because it will check the input each time, not only once. It will check the first condition, then second and lastly the third. If it is a letter z it will change into z. second one will check if the string has an a or z and if it does it will go to the next letter to the alphabet so a goes to z and z goes to a. the last condition will check if the letter has an a, e, I, o or an u and if it does it will make the letter into uppercase. The empty variable(result) will become the new variable, letters.
+                </p>
+            </section>
+
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    <script>
+        //sixth
+        function letterChanges(stri){
+            str = document.getElementById("stri").value;
+            var result="";
+            for (var i = 0; i < str.length; i++){
+                var letters = str[i];
+             if (letters == "z" ){
+                letters = "a";
+            } else if(str.charCodeAt(i) >= "a".charCodeAt(0) && str.charCodeAt(i) <="z".charCodeAt(0)) {
+                letters = String.fromCharCode(str.charCodeAt(i)+1);
+                
+            }if (letters == "a" || letters =="e" || letters =="i"||letters =="o" ||letters =="u"){
+                letters = letters.toUpperCase();
+            }
+            result+=letters;
+          }
+          return alert (result);
+          };          
+          
+        //fifth
+        function FirstReverse(string){
+            string = document.getElementById("string").value;
+            str = string.split('');
+            var reversedWord=str.reverse().join('');
+            return alert (reversedWord);
+        };
+
+        //fourth
+        function LongestWord(sen) {
+            var sen = document.getElementById("sen").value;
+            str = sen.split(" ");
+            var longestWord = 0;
+        
+            for (i=0; i < str.length; i++){
+              if (str[i].length > longestWord){
+                longestWord = str[i].length;
+              }
+            }; 
+            return alert (longestWord);
+        };
+        
+
+        //third one         
+        function LetterCapitalize(str) {
+            var str = document.getElementById("str").value;
+            var split = str.toLowerCase().split(' ');
+            for (var i = 0; i < split.length; i++) {
+                split[i] = split[i].charAt(0).toUpperCase() + split[i].substring(1);
+            };
+            return alert (split.join(''));
+        }
+    
+        //first one
+        function SimpleAdding(num){
+            num=(document.getElementById("num").value);
+            const adding = num * (num+1)/2;
+            alert("the calculated number is " + adding);
+        };
+        //second one
+        function FirstFactorial(sum) {
+            sum = parseInt(document.getElementById("sum").value);
+            factorial = 1;
+            for (var i =1; i <= sum ; i++){
+                factorial *= i;
+            }
+            return alert("The number is " + factorial);
+        };
+    </script>
+</body>
+</html>

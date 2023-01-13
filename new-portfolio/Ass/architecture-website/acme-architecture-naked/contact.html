@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Contact ACME</title>
+		<link rel="stylesheet" href="css/default.css" type="text/css"/>
+		<link rel="stylesheet" href="css/contact.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1 class="logo-heading"><a href="about.html"><img src="img/logo.png" alt="Acme logo"/></a></h1>
+			<nav>
+				<input type="checkbox" id="toggle-menu">
+				<label class="menu-icon" for="toggle-menu">
+						<span></span>
+   						<span></span>
+    					<span></span>
+				</label>
+				<ul class="menu-items">
+					<li class="menu-item"><a href="projects.html#p1">Projects</a></li>
+					<li class="menu-item"><a href="about.html">About</a></li>
+					<li class="menu-item"><a href="ourteam.html">Our team</a></li>
+					<li class="menu-item"><a href="press.html">Press</a></li>
+					<li class="active"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="maining">
+			<div class="left">
+				<h2>Contact us &amp;<br/>Let's design your future together&hellip;</h2>
+				<p>Nunc commodo mollis ex, sit amet ullamcorper libero vehicula et. Etiam mollis mauris malesuada, efficitur diam ac, iaculis ex. Nullam ornare leo ut eros blandit, et vestibulum urna eleifend. Aliquam sed eleifend lorem. Maecenas dignissim, nunc eget suscipit venenatis, tortor tortor mollis odio, eu volutpat ligula lacus et quam. Aliquam erat volutpat. Nunc sed congue mi.</p>
+			</div>
+			<div class="right">
+				<form method="post" action="submit.html">
+					<fieldset>
+						<legend class="title">Name</legend>  					
+						<label class="caption">
+							<span class="caption-text">First Name</span>
+							<input name="fname" required="required" placeholder="your first name"/>
+						</label>
+						<label class="caption">
+							<span class="caption-text">Last Name</span>
+							<input name="lname" required="required" placeholder="your last name"/>
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Email</legend>
+						<input name="email" type="email" required="required" placeholder="your e-mail address"/>					
+					</fieldset>
+					<fieldset>
+						<legend>Subject</legend>
+						<input  name="subject" required="required" placeholder="the subject of your message"/>					
+					</fieldset>
+					<fieldset>
+						<legend>Message</legend>
+						<textarea name="message" required="required" placeholder="here goes your message"></textarea>					
+					</fieldset>					
+					<input class="submit" type="submit" value="Submit" onclick="this.parentElement.classList.add('submitted')"/>
+				</form>
+			</div>			
+		</main>
+		<footer>
+			<h3>Acme Architects</h3>
+			<address>
+				<ul>
+					<li>55 Cieses straat</li>
+					<li>Eichtiemel, 404</li>
+					<li>The Weboland</li>
+				</ul>
+			</address>
+			<address>
+				<ul>
+					<li>+31(0)655-555-555</li>
+					<li><a href="mailto:info@acme.com">info@acme.com</a></li>
+				</ul>
+			</address>
+		</footer>
+	</body>
+</html>	

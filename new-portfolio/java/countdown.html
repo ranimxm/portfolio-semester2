@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link href= "/css/ass.css" rel="stylesheet">    
+    <link href= "/css/cc.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+
+            <h1>Countdown </h1>            
+            <div class="container-cc">
+                <div class="row">
+                    <div class="container-segment">
+                        <div class="segment-title">Days</div>
+                        <div class="segment">
+                          <div class="flip-card" data-days-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-days-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="container-segment">
+                        <div class="segment-title">Hours</div>
+                        <div class="segment">
+                          <div class="flip-card" data-hours-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-hours-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-segment">
+                        <div class="segment-title">Minutes</div>
+                        <div class="segment">
+                          <div class="flip-card" data-minutes-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-minutes-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-segment">
+                        <div class="segment-title">Seconds</div>
+                        <div class="segment">
+                          <div class="flip-card" data-seconds-tens>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                          <div class="flip-card" data-seconds-ones>
+                            <div class="top">0</div>
+                            <div class="bottom">0</div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <p>For this challenge I made a countdown with a targeted date.</p>
+              <section>
+                <h3>The html layout</h3>
+                <img src="/img/cc1.png">
+                <p>
+                  This is the html for the countdown. You can expect the same structure with the minutes and seconds. The real challenge is with javascript and a little bit of css.
+                </p>
+                <h3>The CSS styling</h3>
+                <p>
+                  For flipping I mostly work with the ::before and ::after element. I do this because I don’t have to worry about changing the number using display but instead just show the half of the whole number. Styling the container, numbers and the segment is not a problem but the flipping animation will be. 
+                </p>
+                <img src="/img/cc2.png">
+                <p>
+                  First I will have to use overflow:hidden in order to not see the previous number inside the segment when flipping.
+                </p>
+                <img src="/img/cc3.png">
+                <p>
+                  Next I will add the animations on the top-flip and bottom-flip. I will have to use position absolute on these two while position:relative is on the.flipcard. Now I am sure the animation will stay on the right place. After that I will basically flip the top 90 deg from the bottom, and the other way around with the bottom. After testing it out with a random number I saw that the animation worked well, so now I can start with the javascript.
+                </p>
+              </section>
+              <section>
+                <h3>The Javascript</h3>
+                <img src="/img/cc4.png">
+                <p>
+                  Next I create a function that is responsible for displaying the remaining time until the new date I set. It also animate using the flip animation. First it calculates the numbers of seconds, minutes,hours and days remaining until the new date using ‘time’. Then it calls the flip() function to perform the flip animation for each second or unit passes. The document.querySelector("[data-hours-tens]" selects the flip and then with the math.floors it calculates the ten digits of number hours remaining. After that the flip() function is called. This is how It works for each unit.
+                </p>
+                <img src="/img/cc5.png">
+                <p>
+                  After writing these two functions I set a setinterval() to execute the function repeatedly at a certain time. The const timeBetweenDates calculates the date between the current time and the date I wrote down. Next it will animate the right time using the flipAllCards function. 
+                </p>
+                <img src="/img/cc6.png">
+                <p>
+                  Next I want to have a flip animation. It first checks if the new number is the same as the current number on the flip card. If it is, the function returns without doing anything. If the new number is different it will create two new elements: topFlip and bottomFlip. This will be for the animation.  I used pareInt() to compare the current number with the new number.
+                </p>
+                <p>
+                  It adds an evenlisteners to these two to update the text content when the animation starts and ends, using the animationstarts and animationends. Finally it appends the two elements to the flip card to start the element.
+                </p>
+              </section>
+
+            <div class="return">
+              <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+          </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/countdown.js"></script>
+
+
+</body>
+</html>

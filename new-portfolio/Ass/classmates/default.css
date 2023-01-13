@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.navbar{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.navholder {
+    display: flex;
+    padding: 2em;
+    list-style-type: none;
+}
+.nav-links{
+    margin-left: 1em;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+}
+aside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+dl, details{
+    margin: 1em;
+}
+dt, summary{
+    font-weight: bold;
+}
+details{
+    cursor: pointer;
+    padding: 1em;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    max-width: 90%;
+}
+
+section, main{
+    padding: 3em ;   
+}
+aside p{
+    width: 50%;
+}
+details{
+    max-width: 50%;
+    width: 40%;
+    height: 10em;
+    max-height: 10em;
+}
+.boxholders{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.box{
+    display: flex;
+    max-width: 100%;
+    margin: 2em;
+    flex-direction: column;
+}
+
+.introduction{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+}
+
+.about-me{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2em;
+}
+.image{
+    max-width: 100%;
+    width: 20em;
+    border-radius: 10px;
+    height: auto;
+}
+footer{
+    padding: 2em;
+}
+button{
+    border-radius: 10px;
+    padding: 0.7em;
+    margin: 1em;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three good, three bad</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/index.html">logo</a>
+            </div>
+            <div class="icons">
+                <div id="sunny" class="theme-change" onclick="themeChange()">     
+                    <i class="ri-moon-line" id="moon-button"></i>
+                    <i class="ri-sun-line" id="sun-button"></i>
+                </div>
+                <div class="hamburger" id="hamburger-icon" onclick=hamburgerMenu()>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>  
+                </div>
+            </div>
+            
+        </div>
+      
+        <nav class="nav" id="nav">
+            <ul class="nav-item" id="nav-items">
+                <li ><a href="/index.html">Home</a></li>
+                <li ><a href="/projects.html">Projects</a></li>  
+            </ul>
+        </nav>     
+    </header>
+
+    <section class="container">
+
+        <div class="content ucd">
+            <h2>Three Good, Three Bad </h2>
+            <img src="/img/ucd.jpeg" class="image-content">
+
+            <article>
+                <h4>Three Good Websites</h4>
+                <figure>
+                    <img src="/img/humi.jpg" class="images" alt="Human Interaction">
+                    <img src="/img/BB.jpg" class="images" alt="Baten Bouw, a dutch building/architecture company">
+                    <figcaption>
+                        <div id="biggerImg" class="biggerImg">
+                            <span class="close">&times;</span>
+                            <img class="figure-big" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </figcaption>                
+                </figure>
+                <ol>
+                    <ul>
+                        <h4>Human interaction</h4>
+                        <li>Uses colors very well: only limited to three colors (red, yellow and blue/purple) while maintaining a well composed layout. Also implementing the color theory(triadic colors);</li>
+                        <li>The video on the homepage got my attention and it has a functional, responsive website.</li>
+                    </ul>
+                    <ul>
+                        <h4>Twitter</h4>
+                         <li>Aside from being one of the most used social media, it has a very straight forward layout. If you log in through your computer you can see in the center your feed, ads and/or 
+                            recommended users. On the right side you see tags, messages which you can hide and on the left side some settings and your profile. Pretty straightforward;</li>
+                        <li>It is responsive, and it isn’t too difficult to understand</li>
+                    </ul>
+                    <ul>
+                        <h4>Batenbouw</h4>
+                        <li>The colors are being used minimalistic: not too much colors 
+                            to show how serious/formal the company is. The only colors they used is blue and orange, complemtary.</li>
+                        <li>The menu isn’t confusing. Instead of putting the social media or the number in the footer, they put it on the top. I don’t see it that often but it definitely is much easier if you want to contact them immediately. </li>
+                        <li>Responsive and an attracting landing page. (moving images or boxes is always attracting for me. It immediately catches my eyes and feels interactive enough.)</li>
+    
+                    </ul>
+                </ol>
+            </article>
+            
+            <article>
+                <h3>Three Bad Websites</h3>
+                <figure>
+                    <img src="/img/lipton.png" class="images"  alt="Lipton Webshop">
+                    <img src="/img/lip.jpg" class="images" alt="Lipton horrible menu">
+                    <img src="/img/zara.jpg" class="images"  alt="Zara Webshop">
+                    <img src="/img/cider.jpg" class="images" alt="Cider Webshop">
+                    <!-- for multiple piccas -->
+                    <figcaption>
+                        <div id="biggerImg" class="biggerImg">
+                            <span class="close">&times;</span>
+                            <img class="figure-big" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </figcaption>                
+                </figure>
+                <ol>
+                    <ul>
+                        <h4>Lipton Website</h4>
+                        <li>The images aren’t that high of quality. You can see the white lines next to the image.</li>
+                        <li>The menu doesn’t even work… If you want to close the menu, then it wont close.   </li>
+                        <li>The website is responsive, aside from the menu</li>
+                    </ul>
+                    <ul>
+                        <h4>Zara Shop</h4>
+                        <li>The wording and placement is very confusing.</li>
+                        <li>The hero page or the landing page is very confusing as well. What is the goal behind it? Do they want to make the user go to shop or want to continue looking at the beautiful changing images?</li>    
+                    </ul>
+                    <ul>
+                        <h4>Cider Shop</h4>
+                        <li>The font type is VERY annoying to read, and the font size is also VERY small. </li>
+                        <li>I see what they were trying to do with their new way of managing clothing menu, however the idea backfired: it is very confusing to search for clothes. What if I only want to search for a jacket? On what am I supposed to click on? Pick a mood????</li>
+                        <li>The website isn’t responsive at all.</li>
+                    </ul>
+                </ol>
+            </article>
+            
+
+        </div>
+    </section>
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+    <script src="/index.js"></script>
+    <<script src="/filter.js"></script>>
+</body>
+</html>
