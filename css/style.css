@@ -46,6 +46,9 @@ html[data-theme='light']{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+.gitlink{
+  width: 60%;
+}
 
 #sun-button{
   display: block;
