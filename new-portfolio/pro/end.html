@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The last submission</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html" id="project">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content project">
+
+            <h1>The Last Submission</h1>
+            <img src="/img/pro1.webp" class="image-content">
+
+            <p>
+                The last deadline is coming close and also the end of my group project. There were a lot of discussions and disagreements however we still had to make it. For this submission there were a lot of design wise changes and at the end writing down the report and implement our ideas.
+            </p>
+            <p>
+                Somehow our project collided a lot with the UCD subject, hence why the design phase ended later than intended. 
+            </p>
+
+            <section>
+                <h3>The Design Changes</h3>
+                <p>
+                    You can read more inside the UCD assignment 
+                    <a href="/ucd/testing.html">"Gathering feedback"</a>. 
+                    There you can see how I contriubted. The changes are visible inside the <a href="/files/groupreport.pdf" target="_blank">group report.</a> 
+                </p>
+            </section>
+            <section>
+                <h3>The Group Report</h3>
+                <p>
+                    You can read more inside the UCD assignment<a href="/ucd/heuristic.html">“heuristic evaluation”.</a> 
+                </p>
+            </section>
+            <section>
+                <h3>The Group Report</h3>
+                <p>
+                    The report structure was basically done, the only thing our group had to do was to write down the content. However the Friday before the vacation, Moussa decided to change the structure and wanted to discuss it with the group. Great for the contribution but definitely not needed since we ended up discussing it for at least an hour. In any case, we got feedback from our teacher and ended up at square one (the layout I did). Don’t get me wrong, it is not a bad thing to give your own instate towards the project however don’t force it. Anyhow after getting the feedback I redid the structure and discussed with the group how we will divide the task. 
+                </p>
+                <p>
+                    I volunteered to do the introduction and the assignment overview since I already had a grasp on how to write it down. Next I did chapter 4 and conclusion. The reason why I chose to do chapter 4 is because I wrote most of the text there in the previous sprint so I knew what had to be done and what already was finished. 
+                </p>
+                <p>
+                    Before starting with the report I gave everyone some tips to continue with their chapter such as writing an introduction and provide some details on how we managed to get them.
+                </p>
+            </section>
+            <section>
+                <h3>The Code Implementation</h3>
+                <p>
+                    Before dividing the pages, we had to make the basic elements (header, the block you see on the image below and the footer). We decided to do those things on my computer since I already had everything pulled from Git. Me, Melita and Iris were busy with the placements and fonts while Moussa and Thimo wrote down the colors for the root (Moussa greatly expressed how annoyed he was by sighing and just going to another group because we didn’t do it on his way but hey ).
+                </p>
+                <p>
+                    I started out with the semester overview. I first did the first section of the page. This was easily done. Next was the columns, which was a bit harder to do. There were two problems for this part: how to hide the content and the placement of the image. The image placement was easily solved by using CSS transform and translate. The content also was easily solved thanks to the HTML5 element tag: details/summary. Due to the frontend assignment <a href="/html/classmates.html">"classmates",</a> 
+                    I was able to solve this problem easily with no JavaScript. 
+                </p>
+                <p>
+                    At this moment I had two choices: I could just call it a day and strictly follow the figma design, or I could spice it a little bit up with animations. Of course I choose the second option. 
+                </p>
+                <p>
+                    The first element I animation was the arrow.  If the details is not opened, it will show the left image. If it is opened, then it will show the left image. With some CSS styling, ::before and ::after tag I managed to animate it, however I want the animation to start when the details is toggled open.
+                </p>
+                <img src="/img/end1.png">
+                <img src="/img/end2.png">
+                <p>
+                    To solve this I used a JavaScript function. for each time the DOM content is loaded, it will load the onclick function. With every click, it will start the animation on the class “collapsed”(which is the CSS animation), aka it will toggle. 
+                </p>
+                <img src="/img/end3.png">
+                <p>
+                    The next animation is when the content of the detail(column) is displayed. Basically when the column is clicked on, you will see content. What I want to reach is when it is open, it will not show the content immediately but it goes from low to high opacity within a certain interval. 
+                </p>
+                <p>
+                    First I want the “.down”(the content) opacity go from 0 to 1. So I set the opacity to 0 on the start. After that the code will have to check if the details is opened or not, for this I used “isOpen= false”. Next I use an if/else statement. If the opacity is 0 then it will higher the opacity with an interval of 70 milliseconds (aka it goes from being closed to opened), and for the else: vice versa.
+                </p>
+                <img src="/img/end4.png">
+                <p>
+                    The last animation I added for this page is the icons and list inside the content. The code will check if the detail element is opened or not using the if/else statement. For each list it will add an animation using three classes.  If it is not opened then it will remove the classes. This way the animation will keep repeating.
+                </p>
+                <img src="/img/end5.png">
+                <p>
+                    I finished this page faster than I thought + my part of the report already was done. After rechecking everything I noticed that a group member had a lot of tasks which it might be a lot to handle. I offered my help and made another page: the study overview.
+                </p>
+                <p>
+                    The layout of this page was not a challenge at all since the other page had almost the same layout, but with more animations. The only “real” challenge on this page was the main section, see the image below. The line had to be longer than the width of the text. This was easily solved by using ::after and then margin-left -4em. 
+                </p>
+                <img src="/img/end5.png">
+                <p>
+                    On both of the pages I made sure to make it responsive, which means it works on every device. 
+                </p>
+                <p>
+                    Perhaps you already noticed or maybe even not. I somehow became a big ‘fan’ using the if/else statements. In the future I have to try and find different ways of statements inside JavaScript. 
+                </p>
+
+
+            </section>
+
+            
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+
+</body>
+</html>

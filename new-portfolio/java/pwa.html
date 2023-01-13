@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Web Application</title>
+    <link href= "/css/ass.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta content="7; https://scara.netlify.app/"/>
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+            <h1>Progressive Web Application</h1>
+            <img src="/img/pwa.png" class="image-content">
+            <p>
+                I was asked by a friend of mine if I was able to make a mobile music app for the fandom I am in and after checking the challenges the school proposed I saw an interesting thing: PWA. So my answer was yes and it was a nice bonus for my school assignment.  After researching a few things I was able to make an Progressive Web Application. The only disadvantage for this basic app was it was not possible for IOS, only android. 
+            </p>
+            <ol>
+                <p>These are the topics I will cover in this challenge. It is quite alot, so you can navigate easier with this list:</p>
+                <li> <a href="#first">Setting up the application</a></li>
+                <li> <a href="#second">Icon animation</a></li>
+                <li> <a href="#third">The music playlist and buttons</a></li>
+                <li> <a href="#fourth">Making the media navigation / Mediasesstion API</a></li>
+                <li> <a href="#fifth">Showcase using a stimulator online</a></li>
+            </ol>
+            <section id="first">
+                <h3>Setting up the application</h3>
+                <img src="/img/pwa1.png">
+                <p>
+                    The first thing I had to do was making an index.html which links to manifest.json and service worker(sw).js. if I want to make an CSS or any other JavaScript file I had to put it in a separate file. 
+                </p>
+                <p>Next I had to register the html to the service worker. With this code I was able to register myself: </p>
+                <img src="/img/pwa2.png">
+                <p>What this code does is register the file into the SW and console will tell me if it worked or not.  Once it is register you will be able to see this when you inspect: 
+                    <img src="/img/pwa3.png">
+
+                    On the right tab you see “application”. This means it is working.  
+                </p>
+                <img src="/img/pwa4.png">
+                <p>
+                    The next thing you have to do is fill in the manifest.json file. In this file you write down the name of your application, short_name etc. the start_url is where you want the page to start, the landing page. I used the dot for this project but you can also call it index.html etc. Next thing I had problems is was that it didn’t work out with the .webp file or that I wrote down “size’ instead of “sizes”… Took me 3 hours to figure that error out so it is very important that the names inside the manifest file is correct. Inside the index.html file the theme-color must be the same as the manifest file or else it wont work.
+                </p>
+                <img src="/img/pwa5.png">
+                <p>After that I set up the sw.js file. In here I started installing the sw. what this code does is before installing it, it will check if all the three files I noted down (the start_url, style.css and the image) and if it is there then it will continue working, it wont install if these three files are not there.</p>
+                <img src="/img/pwa6.png">
+                <p>
+                    And then I had to request the fetching to all three files. It only installs once so I don’t have to do it every time I add a new file. 
+                </p>
+                <img src="/img/pwa7.png">
+                <p>After the fetch is successful, I added this code to connect the fetched files into the url as you can see on the image above.</p>
+                <p>
+                    Now that everything is set up for downloading it is now time to make the content. For this project I planned on making a music app. I wanted to make it offline, however it had something to do with backend so I didn’t even try. Setting up the html file wasn’t a real challenge so I wont explain that part.
+                </p>
+            </section>
+            <section id="second">
+                <h3>Icon animation</h3>
+                <img src="/img/pwa8.png">
+                <p>
+                    On the left side there is an icon of the app. If you touch it, it will play an audio and animate the picture. This is the CSS code. What the keyframe does is just move the picture a bit up and shake it to a certain degree. 
+                </p>
+                <img src="/img/pwa9.png">
+                <p>
+                    Next I added JavaScript to start the animation every time it clicks. The only thing I had to do is add an onclick function and change the pictures with an if/else statement. Next the class for the animation will be added or removed every time it clicks with a short audio to “spice up” the icon animation.
+                </p>
+            </section>
+            <section id="third">
+                <h3>The music playlist and buttons</h3>
+                <p>
+                    After making the layout I started making the music section. The only challenge I had with styling is the progress-bar. This was solved easily .progress-bar::before and position: relative/position: absolute. And then using a transition to make it look pretty. Now that the CSS is done I started out with JavaScript. 
+                    Before starting coding, I put all the music audio I have into an array in a separate file (music-list.js). This music list will be automatically updated using the code you can see on the image: 
+                </p>
+                <img src="/img/pwa10.png">
+                <p>This will fetch the music from the list into the html file as an li element. It will also add the duration, name etc. 
+
+                </p>
+                <p>
+                    First I will pick a random number using the math.random inside the allmusic (the list I made). The ismusicpaused basically checks if the music is paused using an Boolean. Next the window load updates the information about the music using the functions underneath. The loadmusic will use the music which got picked up randomly as parameter and then it will display it inside the html page. The setmediameta will be explained later.
+                </p>
+                <img src="/img/pwa11.png">
+                <p>
+                    After this I make functions for the play, pause, previous and next music. I made this just adding and removing the paused class and replace the innertext with the right function. With the prev/next button I had to check the musiclist with Boolean. After that I added addEventListener() to the buttons. 
+                </p>
+                <p>
+                    Next I have to update the progress bar according to the current music.  The currentTime is the audio in seconds while the duration is the total time of the music. Next I calculate the progressbar using currentime/duration *100. This value will be used by the CSS file using display inline. The current music duration will be updated inside the html using the musicDuartion (which shows the total) and the musicCurrentTime(which shows the current music time). If the seconds digits are less then 10, than a 0 will always be added so that it will always display a 2 digit number. 
+                </p>
+                <img src="/img/pwa12.png">
+                <p>
+                    After that I will make multiple addEventListener() for the user to decide the placement on the progressbar. Using the mousedown, mousemove, mouseup and click event I was able to make it work. With each one of them I added the function playMusic() and playingSong(). This will make the audio play no matter what event or placement. Also in the function I calculated the total width of the progressbar and then calculated the duration of the music.
+                </p>
+                <figure>
+                    <img src="/img/pwa13.png" class="images">
+                    <img src="/img/pwa14.png" class="images">
+                    <figcaption>
+                        <div id="biggerImg" class="biggerImg">
+                            <span class="close">&times;</span>
+                            <img class="figure-big" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </figcaption>                
+                </figure>
+                <p>You can click on the images to make it bigger.</p>
+                <p>  
+                    Next I make the loop, shuffle and repeat onclick. I made this using addEventListener(). First I get the repeat button from the html into the let. Then I use the switch statement to get multiple functions. With all three of the options I made an attribute and changed the html file. After making these three functions, I made another addEventListener when the audio is ended. It depends which button you have on the html file. Inside the “repeat one” case, it will make the played song time to 0 and it will start from there. The “shuffle” will choose a random music from the musicList and load it into the page.
+                </p>
+            </section>
+            <section id="fourth">
+                <h3>Making the media navigation /  Mediasession API</h3>
+                <img src="/img/pwa15.png">
+                <p>
+                    Since the main functionality is done for the music “app”, I started out with the mediasession. After a lot of trial and error I found out that the mediasession MUST be on the top of the javascript file, never on the bottom. So I first put the mediaSession.metadata on top of the file. After that I made a function which will call the mediasession. What this does is it checks if the mediaSession is inside the navigator, and if it does then it will show the title, artist and artwork from the current music. After that I made the setActionHandler. These are the functions you usually see in every audioplayer or videoplayer. Since I only made the play, pause, previous and next functions, I will only use those four. I also put the corresponded function inside the actionHandler, which will update both on the website and on the navigator. Once the function setMediaMetaData is finished, I recalled this function on multiple other functions inside the code to make it work. 
+                </p>
+            </section>
+            <section id="fifth">
+                <h3>Showcase using a stimulator online</h3>
+                <p>
+                    After writing 302 lines of code it is finally done. You can visit the <a href="https://scara.netlify.app/" target="_blank">website</a> yourself or you can check out this window stimulators.
+                </p>
+                <p>It shows you how it will look like on the mobile.</p>
+                <video controls width="100%">
+                    <source src="/img/videos.mp4">
+                </video>
+            </section>
+
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/biggerImg.js"></script>
+
+    
+</body>
+</html>

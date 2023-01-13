@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href= "/css/clock.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="wrapper">
+                <li>
+                    <a href="/projects/projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="logo">home</a>
+                </li>
+                <li>
+                    <div id="sunny" class="theme-change" onclick="themeChange()">     
+                        <i class="ri-moon-line" id="moon-button"></i>
+                        <i class="ri-sun-line" id="sun-button"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="return">
+        <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+    </div>
+    <section class="container">
+        <nav>
+            <ol class="categories">
+                <h2>categories</h2>
+                <li>
+                    <a href="/projects/projects.html">All Projects</a>
+                </li>
+                <li>
+                    <a href="/projects/html.html">HTML / CSS</a>
+                </li>
+                <li>
+                    <a href="/projects/java.html" id="java">Javascript</a>
+                </li>
+                <li>
+                    <a href="/projects/project.html">Project</a>
+                </li>
+                <li>
+                    <a href="/projects/ucd.html">User Experience Design</a>
+                </li>
+                <li>
+                    <a href="/projects/media.html">Media Production</a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="content java">
+
+            <h1>The Clock </h1>
+            <!-- <img src="/img/clock.jpg" class="image-content"> -->
+            <!-- the clock -->
+            <ol class="clock">
+                <li class="hand hour" hand-hour></li>
+                <li class="hand minutes" hand-minutes></li>
+                <li class="hand seconds" hand-seconds></li>  
+                    <li class="number number1">1</li>
+                    <li class="number number2">2</li>
+                    <li class="number number3">3</li>
+                    <li class="number number4">4</li>
+                    <li class="number number5">5</li>
+                    <li class="number number6">6</li>
+                    <li class="number number7">7</li>
+                    <li class="number number8">8</li>
+                    <li class="number number9">9</li>
+                    <li class="number number10">10</li>
+                    <li class="number number11">11</li>
+                    <li class="number number12">12</li> 
+            </ol>
+            <p>For this challenge I had to make an analog clock. Not only do I have to think about how to code with Javascript, 
+                but also how to animate it with CSS and how to make it responsive.
+            </p>
+            <section>
+                <h3>The Clock in CSS</h3>
+                <p>
+                    At first I just made an ul list with hand, minutes and seconds counter. After that just wrote down the numbers from 1 to 12, just like any clocks you 
+                    see in your daily life. Before doing the css I just know that all the three hands will be the same, although the hours/minutes/hands counter will be different with size and height so I gave it their own class name, makes it easier to style it.                 
+                </p>
+                <img src="/img/clockcss.jpg">
+                <p>
+                    Then I started out with the styling. Firstly make the container in a circle and place it in the middle. There is no reason as to why it is in the middle. Afterwards I placed the numbers. I used position:relative inside the container/.clock and used position:absolute for the numbers. This way the placement will be connected and/or depended on the container. then I just set the var=0 and made the numbers in degrees. Now the hands, they will change placement after using javascript so I had to think about from where it will transform: 
+                    which is the bottom. So I used transform-origin:bottom at the hand and then use transform:translate and calculate the rotation per degree.  
+                </p>
+
+            </section>
+            <section>
+                <h3>The Clock in Javascript</h3>
+                <img src="/img/clockjava.jpg">
+                <p>
+                    Now the javascript. first use an interval which updates the code for every milisecond I provided. Then just get the time of each hour,seconds and minutes and put them in a variable using data-category. 
+                    Then make a function which gets the current time and divide it into the correct time for the clock. At last I make another function which will change the style using the var() I made in the css and it will update it every interval I set at the beginning.
+                </p>
+            </section>
+
+
+            
+            <div class="return">
+                <a href="/projects/projects.html"><span>&#8592;</span> Back to projects</a>
+            </div>
+        
+        </div>
+    </section>
+
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+
+    <div class="background-animation" >
+        <ul class="boxes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div >
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="/js/index.js"></script>
+    <script>
+        setInterval(setClock, 1000);
+
+        const handHour = document.querySelector('[hand-hour]');
+        const handMinutes = document.querySelector('[hand-minutes]');
+        const handSeconds = document.querySelector('[hand-seconds]');
+
+        function setClock(){
+            const currentDate = new Date();
+            const seconds = currentDate.getSeconds()/60;
+            const minutes = (seconds + currentDate.getMinutes())/60;
+            const hours = (minutes + currentDate.getHours())/12;
+
+            setRotation(handSeconds, seconds);
+            setRotation(handMinutes, minutes);
+            setRotation(handHour, hours);
+        };
+
+        function setRotation(element, rotation){
+            element.style.setProperty('--rotation', rotation * 360);
+        };
+
+        setClock()
+    </script>
+
+</body>
+</html>

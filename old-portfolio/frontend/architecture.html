@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HTML and CSS challenge</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/index.html">logo</a>
+            </div>
+            <div class="icons">
+                <div id="sunny" class="theme-change" onclick="themeChange()">     
+                    <i class="ri-moon-line" id="moon-button"></i>
+                    <i class="ri-sun-line" id="sun-button"></i>
+                </div>
+                <div class="hamburger" id="hamburger-icon" onclick=hamburgerMenu()>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>  
+                </div>
+            </div>
+            
+        </div>
+      
+        <nav class="nav" id="nav">
+            <ul class="nav-item" id="nav-items">
+                <li ><a href="/index.html">Home</a></li>
+                <li ><a href="/projects.html">Projects</a></li>  
+            </ul>
+        </nav>     
+    </header>
+    
+    <section class="container">
+        <div class="content frontend">
+            <h2>The HTML page with CSS </h2>
+            <img src="/img/architecture.jpg" class="image-content">
+            <article>
+                <p>We received through GitLab a file with only images and html pages. The task for the class and me was to make a responsive website out of it. It was a huge challenge since the only thing I 
+                    could only use was CSS with no JavaScript. so how to make a responsive and interactive website with no JavaScript?</p>
+                <h4>The First Challenge</h4>
+                <img src="/img/archi1.jpg" class="image-content">
+                <p>The first challenge of the website was making a slideshow. 
+                    By using carousel I was able to solve it. I never thought making the width over 100% of the screen, since I didn’t know it was possible but it was. So I set the max 
+                    width of the container to 400% and each picture has 100%. It has display flex and flex direction to row. Each child (the li) has position relative and overflow hidden. The overflow hidden is to make the scrollbar hidden. To make a smooth scrolling I put in the body scroll smooth and voila that was the solution to this challenge. Took me 3 days to figure out… </p>
+                <h4>The Second Challenge</h4>
+                <p>Second challenge was putting text on the image. 
+                    By using position absolute I was able to solve it. And using media queries on position inherit/relative I was able to make it responsive. Also lowering the background color of the textbox in order to see the image behind it.
+                </p>
+                <h4>The Third Challenge </h4>
+                <img src="/img/archi3.jpg" class="image-content">
+                <p>
+                    Third challenge was making the error page. 
+	                There was nothing in the html page so I had to think of something to put there. At first I was thinking about a normalized loading circle. But while thinking I looked at the logo and thought by myself: this is circle as well. How about making the inner circle spin?. So with @keyframes I animated the circle. I had to make a div inside a div and inside the CSS I coded it as a circle and with keyframes I animated the largest circle. Somehow that makes the top (white) circle move.
+                </p>
+                <h4>The Fourth Challenge</h4>
+                <p>
+                    Fourth challenge was to make a responsive menu, aka hamburger menu:
+	                The only solution or the only way I was able to make it was using an input tag as checkbox type inside the html with a label and three span tags. So if you click on the check box, it will open the menu list. Playing with display block and none I was able to make it. And with media queries it was made responsive. The span tags were only there for the hamburger icon, so you can also use an icon inside the label tag. The only problem I wasn’t able to solve was that the hamburger icon was moving on its own… 
+                </p>
+                <h4>Conclusion</h4>
+                <p>
+                    Aside form the challenges, I was able to learn from it a lot. For example with the forms and input type. I didn’t know there were different types and actually were functional? Like the input type=checkbox makes a checkbox and input type=date shows an actual functional calendar input? It was very funny to see it. 
+                </p>
+            </article>
+        </div>
+    
+    </section>
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+    <script src="/index.js"></script>   
+
+    
+</body>
+</html>

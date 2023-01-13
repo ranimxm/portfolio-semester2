@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreating Prototype</title>
+    <link href= "/css/ass.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/index.html">logo</a>
+            </div>
+            <div class="icons">
+                <div id="sunny" class="theme-change" onclick="themeChange()">     
+                    <i class="ri-moon-line" id="moon-button"></i>
+                    <i class="ri-sun-line" id="sun-button"></i>
+                </div>
+                <div class="hamburger" id="hamburger-icon" onclick=hamburgerMenu()>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>  
+                </div>
+            </div>
+            
+        </div>
+      
+        <nav class="nav" id="nav">
+            <ul class="nav-item" id="nav-items">
+                <li ><a href="/index.html">Home</a></li>
+                <li ><a href="/projects.html">Projects</a></li>  
+            </ul>
+        </nav>     
+    </header>
+    
+    <section class="container">
+        <div class="content ucd">
+            <h2>Recreating Prototype </h2>
+            <img src="/img/figmaproto.jpg" class="image-content">
+            <article>
+                <p>The challenge of this assignment was to recreate a certain picture into a design tool webspage. You could use Penpot however I did it with Figma.</p>
+                <p>The first image was the picture I had to recreat.In the second image you can see the endresult. The challenge was to find the exact icon and impliment in into the website.</p>
+            </article>
+            <figure>
+                <img src="/img/figmepp.jpg" class="images" alt="The prototype I had to recreate">
+                <img src="/img/figmaproto.jpg" class="images" alt="The prototype I made">
+                <figcaption>
+                    <div id="biggerImg" class="biggerImg">
+                        <span class="close">&times;</span>
+                        <img class="figure-big" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                </figcaption>
+            </figure>
+            <p>
+                You can also see the protoype I made in 
+                <a href="https://www.figma.com/file/wvHdH4wNvq0ogIxofoJHUz/proto?node-id=0%3A1&t=9Srse9ev6JpSDLRD-1" target="_blank" class="redirect">Figma.</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <span>Created by Ranim Mohammad | &#169; All rights reserved</span>
+    </footer>
+    <script src="/index.js"></script>   
+
+    
+</body>
+</html>
