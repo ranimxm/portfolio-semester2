@@ -1,4 +1,4 @@
-@import url(/css/style.css);
+ @import url(/css/style.css); 
 
 :root, html[data-theme='dark']{
     --html: blue;
@@ -18,7 +18,7 @@
     --ucd-hover:rgb(255, 217, 0);
     --html-hover:rgb(80, 182, 250);
     --java-hover:rgb(54, 197, 22);
-    --project-hover:rgb(255, 141, 48);
+    --project-hover:rgb(255, 54, 171);
     --media-hover:rgb(223, 255, 141);
 }
 
@@ -185,6 +185,25 @@ figcaption{
 }
 .mediatop{
     border-top: 3px solid var(--media);
+}
+
+.filter li:nth-child(2) a:hover {
+    color: var(--a-hover);
+}
+.filter li:nth-child(3) a:hover {
+    color: var(--html-hover);
+}
+.filter li:nth-child(4) a:hover {
+    color: var(--java-hover);
+}
+.filter li:nth-child(5) a:hover {
+    color: var(--project-hover);
+}
+.filter li:nth-child(6) a:hover {
+    color: var(--ucd-hover);
+}
+.filter li:nth-child(7) a:hover {
+    color: var(--media-hover);
 }
 
 @media (max-width: 768px){

@@ -15,6 +15,13 @@
     --button:rgba(0, 191, 255, 0.552);
     --buttonhover:rgba(0, 191, 255, 0.193);
     --input: rgba(236, 236, 236, 0.914);
+
+    --a-hover:rgb(255, 8, 255);
+    --ucd-hover:rgb(255, 247, 0);
+    --html-hover:rgb(80, 182, 250);
+    --java-hover:rgb(54, 197, 22);
+    --project-hover:rgb(255, 54, 171);
+    --media-hover:rgb(223, 255, 141);
 }
 
 html[data-theme='light']{
@@ -32,7 +39,10 @@ html[data-theme='light']{
     --button:rgba(12, 65, 172, 0.599);
     --buttonhover:rgba(12, 66, 172, 0.2);
     --input:rgb(229, 229, 229);
+
+    --a-hover:rgb(50, 14, 50);
 }
+
 .home-main{
     height: 100%;
     display: flex;
@@ -291,6 +301,58 @@ section input:focus{
     padding-left: .9em;
 }
 
+summary{
+    border: 1px solid var(--text--);
+    padding: 1em;
+}
+
+details div{
+    border: 1px solid var(--text--);
+    padding: 1em;
+}
+summary{
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+summary p{
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    background: var(--button);
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--text--);
+    transition: transform 0.3s ease-in-out;
+}
+.arrow::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid var(--text--);
+    border-left: 2px solid var(--text--);
+    right: 10px;
+}
+.arrow::after {
+    transform: rotate(45deg);
+}
+  /* Rotate the arrow when details is open */
+details[open] .arrow {
+    transform: rotate(90deg);
+}
+ 
+details div{
+    border-top: none;
+}
 table{
     border-collapse: collapse;
     width: 100%;
@@ -299,6 +361,25 @@ td, th{
     border: 1px solid var(--text--);
     padding: .3em;
 }
+.categories li:nth-child(2) a:hover {
+    color: var(--a-hover);
+}
+.categories li:nth-child(3) a:hover {
+    color: var(--html-hover);
+}
+.categories li:nth-child(4) a:hover {
+    color: var(--java-hover);
+}
+.categories li:nth-child(5) a:hover {
+    color: var(--project-hover);
+}
+.categories li:nth-child(6) a:hover {
+    color: var(--ucd-hover);
+}
+.categories li:nth-child(7) a:hover {
+    color: var(--media-hover);
+}
+
 
     @media (max-width: 1000px){
         .container nav{
@@ -310,6 +391,16 @@ td, th{
     }
 
 @media (max-width: 768px){
+    .arrow{
+        width: 40px;
+        height: 40px;
+        margin-right: .4em;
+    }
+    .arrow::after{
+        width: 19px;
+        height: 19px;
+        right: 8.5px;
+    }
     .container nav{
         margin-right: 0;
     }

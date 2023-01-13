@@ -1,4 +1,13 @@
-
+:root, html[data-theme='dark']{
+  --text--:white;
+  --bb:rgba(224, 162, 162, 0.9);
+  --bh: rgba(126, 90, 90, 0.9);
+}
+html[data-theme='light']{
+  --text--:black;
+  --bb: rgba(186, 178, 178, 0.9);
+  --bh: rgba(186, 178, 178, 0.9);
+}
  .calculator-grid {
     display: grid;
     justify-content: center;
@@ -12,14 +21,14 @@
   .calculator-grid button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid var(--text--);
     width: auto;
     outline: none;
-    background-color: rgb(243, 239, 234);
+    background-color: var(--bb);
   }
   
   .calculator-grid button:hover {
-    background-color: rgba(186, 178, 178, 0.9);
+    background-color: var(--bh);
     transition: .2s ease-out;
   }
   

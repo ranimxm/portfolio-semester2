@@ -79,7 +79,13 @@
             <section>
                 <h3>The Group Report</h3>
                 <p>
-                    You can read more inside the UCD assignment<a href="/ucd/heuristic.html">“heuristic evaluation”.</a> 
+                    You can read more inside the UCD assignment <a href="/ucd/heuristic.html">“heuristic evaluation”.</a> 
+                </p>
+                <h3>The final presentation</h3>
+                <p>
+                    For the final 
+                   <a href="/files/Presentation-Final.pdf" target="_blank">presentation</a> 
+                    we divided the same way as we did with the report since evryone who actually wrote something know what we are talking about. After that me, Iris and Thimo made the presentation and made a start for the transcript of the presentation. 
                 </p>
             </section>
             <section>
@@ -132,7 +138,7 @@
                 <p>
                     The layout of this page was not a challenge at all since the other page had almost the same layout, but with more animations. The only “real” challenge on this page was the main section, see the image below. The line had to be longer than the width of the text. This was easily solved by using ::after and then margin-left -4em. 
                 </p>
-                <img src="/img/end5.png">
+                <img src="/img/end6.png">
                 <p>
                     On both of the pages I made sure to make it responsive, which means it works on every device. 
                 </p>
@@ -140,8 +146,59 @@
                     Perhaps you already noticed or maybe even not. I somehow became a big ‘fan’ using the if/else statements. In the future I have to try and find different ways of statements inside JavaScript. 
                 </p>
 
+                <!-- the header -->
+                <h4>The header</h4>
+                <p>Since not everyone was willing to make the header or had something else to do, I volunteered myself to make the header. For this project, it consisted of a dropdown menu and a hamburger menu to make it responsive.
+                    On the image below you can see the html layout I used for the header. The hamburger icon is outside the header since it will effect the flex property I used on the .nav. Nex I put the dropdown list and inside of it I made a list of the dropdown items. Outside the items I put the pointer, in order not to get effected with the list underneath. 
+                </p>
+                <img src="/img/end7.png">
+                <p>
+                    The next “hard” challenge was making the CSS. For the dropdown list I used keyframes and display:none. The keyframes are there to make a smooth animation (and to make the content displayed with using the visibility: hidden/visible). Using position absolute will make the item stay on its place and not go anywhere else.
+                </p>
+                <img src="/img/end8.png">
+                <p>
+                    Now for the pointer I had to use JavaScript. My plan was to add an class with JavaScript and to animate that certain class. This will start the keyframe whenever it will be clicked. But first I had to make the arrow. Firstly I will use the ::after/::before to style the up and bottom. Inside that I wrote down that it will rotate from 0, which means it will start rotating from 0. Then I rotated both of the ::after/::before differently. The background-color:transparent will make the top of the arrow (or cross if it isn’t transparent) hidden or aka transparent. 
+                </p>
+                <p>
+                    I had the same thought with the other class I will add on JavaScript.
+                </p>
+                <img src="/img/end9.png">
+                <p>
+                    Next, with an addeventlistener I will add and toggle the class active on the dropdown menu.
+                </p>
+                <img src="/img/end10.png">
+                <p>
+                    Now it is part for the hamburger menu. First I had to animate it to and be displayed only when the screen is small. The second part is to open the menu when clicking on the icon.  
+                </p>
+                <p>
+                    The first part was not difficult since I only had to use display:none on the nav items when the screen is small and on the hamburger icon when the screen is big. To animate the hamburger icon I combined both CSS and JavaScript.  By adding keyframes and transform translate on the lines, I was able to animate each line of the icon. Next I used the same method as the one I did for the pointer: addeventlistener and toggle the added class (this time its called .clicking). 
+                </p>
+                <img src="/img/end11.png">
+                <p>
+                    For the second part I used JavaScript. First I stored two classes inside separate variables. Then I used the addeventlistener which toggles the class display on or off.
+                </p>
+                <img src="/img/end12.png">
+                
+                <!-- about us/student life -->
+                <h4>About us and student life</h4>
+                <p>
+                    Sadly enough, both the about us and student page was not finished on time so I volunteered myself to wrap up both of the pages.
+                    The first page I wrapped up was the about us. Lucky enough some functions were working such as the slider. Some layout elements were also implemented on it however it did not look neat nor did the layout work properly, for example the boxes and images were 
+                    too big to fit the screen which causes overflow. The previous maker used display:grid, so I made sure to make us eof the previous elements and make it work to my benefit.
+                    Thanks to that I am now much better at working with grid. 
+                    However Melita submitted his own version of the about us page at 5am and his looked more like the prototype version, so I let him take the credit.
+                </p>
+                <p>
+                    Next page is the student life. This page also had some basic elements and functions however not all worked. For example the table in the second section was working, but the second table was not. 
+                    The previous maker, melita, made use of radio buttons and some pop up elements.
+                    The radio buttons didn’t work on both of the sections(there are two sections with the radio buttons), I made both of them work by changing the name and the CSS. 
+                    The popup also was not covering the whole screen when displayed. I had to solve the issue with the section width and play with the other elements. 
+                    The next thing I had to solve were the elements. Combined with the CSS I made for my part and the CSS I made just for htis page, I was able to make the layout properly.
+                </p>
+                <img src="/img/ref1.jpg">
 
             </section>
+            
 
             
             <div class="return">
